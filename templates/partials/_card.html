@@ -1,0 +1,106 @@
+{% load static %}
+
+{% if item.category == 'groceries' %}
+      <!-- Card for details -->
+      <div class="card my-2 mx-2 boy-card {% if 'detail' in request.path %} mx-autio w-25 {% endif %} ">
+        <img src="{% if item.image %}
+        {{item.image.url}}
+        {% else %}
+        {% static './images/shop.png' %}
+        {% endif %}" class="img-fluid" />
+        <div class="card-header">
+          <a href="{% url 'detail' item.id %}" class="text-white header-link">{{item.name}} </a>
+        </div>
+        <div class="card-body pb-0">
+          <p>
+            <i class="fas fa-at mr-2"></i>
+            {{item.category}}
+          </p>
+
+          <p><i class="fas fa-info-circle mr-2"></i>{{item.info}}</p>
+          <p><span>&#36;</span>{{item.cost}}</p>
+        </div>
+      </div>
+      <!-- Card for details ends -->     
+{% else %}      
+{% endif %}
+{% if  item.category == 'electronics' %}
+      <!-- Card for details -->
+      <div class="card my-2 mx-2 boy-card {% if 'detail' in request.path %} mx-autio w-25 {% endif %} ">
+        <img src="{% if item.image %}
+        {{item.image.url}}
+        {% else %}
+        {% static './images/electronics.png' %}
+        {% endif %}" class="img-fluid" />
+        <div class="card-header">
+          <a href="{% url 'detail' item.id %}" class="text-white header-link"
+            >{{item.name}} </a
+          >
+        </div>
+        <div class="card-body pb-0">
+          <p>
+            <i class="fas fa-at mr-2"></i>
+            {{item.category}}
+          </p>
+
+          <p><i class="fas fa-info-circle mr-2"></i>{{item.info}}</p>
+          <p><span>&#36;</span>{{item.cost}}</p>
+        </div>
+      </div>
+      <!-- Card for details ends -->     
+{% else %}      
+{% endif %}
+{% if  item.category == 'officesupplies'   %}
+      <!-- Card for details -->
+      <div class="card my-2 mx-2 boy-card {% if 'detail' in request.path %} mx-autio w-25 {% endif %} ">
+        <img src="{% if item.image %}
+        {{item.image.url}}
+        {% else %}
+        {% static './images/schoolsupplies.png' %}
+        {% endif %}" class="img-fluid" />
+        <div class="card-header">
+          <a href="{% url 'detail' item.id %}" class="text-white header-link"
+            >{{item.name}} </a
+          >
+        </div>
+        <div class="card-body pb-0">
+          <p>
+            <i class="fas fa-at mr-2"></i>
+            {{item.category}}
+          </p>
+
+          <p><i class="fas fa-info-circle mr-2"></i>{{item.info}}</p>
+          <p><span>&#36;</span>{{item.cost}}</p>
+        </div>
+      </div>
+      <!-- Card for details ends -->     
+{% else %}      
+{% endif %}
+{% if item.category == 'party' %}
+      <!-- Card for details -->
+      <div class="card my-2 mx-2 boy-card {% if 'detail' in request.path %} mx-autio w-25 {% endif %} ">
+        <img src="{% if item.image %}
+        {{item.image.url}}
+        {% else %}
+        {% static './images/balloon.jpg' %}
+        {% endif %}" class="img-fluid" />
+        <div class="card-header">
+          <a href="{% url 'detail' item.id %}" class="text-white header-link"
+            >{{item.name}} </a
+          >
+        </div>
+        <div class="card-body pb-0">
+          <p>
+            <i class="fas fa-at mr-2"></i>
+            {{item.category}}
+          </p>
+
+          <p><i class="fas fa-info-circle mr-2"></i>{{item.info}}</p>
+          <p><span>&#36;</span>{{item.cost}}</p>
+          
+          
+        </div>
+      </div>
+      <!-- Card for details ends -->     
+{% else %}      
+{% endif %}

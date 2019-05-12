@@ -1,0 +1,34 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+My Items
+{% endblock title %}My Items
+
+{% block content %}
+{{total_cost}}
+<!-- Main Section -->
+    <div class="container">
+      <h3 class="heading font-weight-light">Here are your Items</h3>
+     
+      <hr />
+    </div>
+    <div class="container main-part">
+    
+    {% if items %}
+    
+    {% for item in items %}
+    {% include "partials/_card.html" %}
+    {% comment %} {% total = sum(item.cost) %} {% endcomment %}
+    
+    {% endfor%}
+
+    {% else %}
+    <p class="d-block font-weight-light my-2 heading"> No Items</p>
+    {% endif %}
+
+   
+    
+    </div>
+    <!-- Main Section ends-->
+{% endblock content %}
