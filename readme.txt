@@ -16,14 +16,6 @@ Hence the name LenBo!
 ------------------------------------------------------------------------------------------------------------------
 To save time we have also made a test user with sample data feeded... 
 
-Test-User: https://skad.pythonanywhere.com/
-username: singh
-password: likliklik
-
-Test-AdminUser: https://skad.pythonanywhere.com/admin
-username: lenbo
-password: lenbo20
-
 You may also create a new user by signing up and test the functionality of the website.
 
 REQUIREMENTS
